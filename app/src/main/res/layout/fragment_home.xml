@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_gradient_yellow"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/avatar_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:src="@drawable/ic_avatar_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/violet" />
+
+    <ImageView
+        android:id="@+id/notifications_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:padding="12dp"
+        android:src="@drawable/ic_notifiaction"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/avatar_img" />
+
+    <TextView
+        android:id="@+id/account_balance_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_balance"
+        android:textColor="@color/standart_grey"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar_img" />
+
+    <TextView
+        android:id="@+id/account_balance_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="$3200"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_balance_title_tv" />
+
+    <View
+        android:id="@+id/income_view"
+        android:layout_width="164dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_shape_filled"
+        android:backgroundTint="@color/green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_balance_tv" />
+
+    <View
+        android:id="@+id/expenses_view"
+        android:layout_width="164dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_shape_filled"
+        android:backgroundTint="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_balance_tv" />
+
+    <View
+        android:id="@+id/income_inside_view"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/rounded_shape_filled"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/income_view"
+        app:layout_constraintStart_toStartOf="@+id/income_view"
+        app:layout_constraintTop_toTopOf="@+id/income_view" />
+
+    <ImageView
+        android:id="@+id/income_inside_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_income"
+        app:layout_constraintBottom_toBottomOf="@+id/income_inside_view"
+        app:layout_constraintEnd_toEndOf="@+id/income_inside_view"
+        app:layout_constraintStart_toStartOf="@+id/income_inside_view"
+        app:layout_constraintTop_toTopOf="@+id/income_inside_view" />
+
+    <View
+        android:id="@+id/expenses_inside_view"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/rounded_shape_filled"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/expenses_view"
+        app:layout_constraintStart_toStartOf="@+id/expenses_view"
+        app:layout_constraintTop_toTopOf="@+id/expenses_view" />
+
+    <ImageView
+        android:id="@+id/income_expense_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_expense"
+        app:layout_constraintBottom_toBottomOf="@+id/expenses_inside_view"
+        app:layout_constraintEnd_toEndOf="@+id/expenses_inside_view"
+        app:layout_constraintStart_toStartOf="@+id/expenses_inside_view"
+        app:layout_constraintTop_toTopOf="@+id/expenses_inside_view" />
+
+    <TextView
+        android:id="@+id/income_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/income"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/income_inside_view"
+        app:layout_constraintTop_toTopOf="@+id/income_inside_view" />
+
+    <TextView
+        android:id="@+id/expense_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/expense"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/expenses_inside_view"
+        app:layout_constraintTop_toTopOf="@+id/expenses_inside_view" />
+
+    <TextView
+        android:id="@+id/income_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="$2200"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/income_inside_view"
+        app:layout_constraintTop_toBottomOf="@+id/income_title_tv" />
+
+    <TextView
+        android:id="@+id/expense_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="$1200"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/expenses_inside_view"
+        app:layout_constraintTop_toBottomOf="@+id/expense_title_tv" />
+
+    <ImageView
+        android:id="@+id/graph_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_graph"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spend_frequency_tv" />
+
+    <TextView
+        android:id="@+id/spend_frequency_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/spend_frequency"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/income_view" />
+
+    <TextView
+        android:id="@+id/recent_transactions_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Recent Transactions"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graph_view" />
+
+    <TextView
+        android:id="@+id/open_all_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_shape_filled"
+        android:backgroundTint="@color/violet_light"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="20dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="6dp"
+        android:text="@string/see_all"
+        android:textColor="@color/violet"
+        app:layout_constraintBottom_toBottomOf="@+id/recent_transactions_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recent_transactions_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
